@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Metaintro Analytics $ENV Build"
+      - echo "Metaintro Analytics Build $CODEBUILD_BUILD_NUMBER"
+  build:
+    commands:
+      - yarn build
+artifacts:
+  name: metaintro-analytics-$(date +%Y-%m-%d)-build-$CODEBUILD_BUILD_NUMBER
+  base-directory: "src"
+  files:
+    - "**/*"
