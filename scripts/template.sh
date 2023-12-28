@@ -101,7 +101,7 @@ server {
         default_type application/json;  # Ensure the content is treated as JSON
         return 200 '{ "status": "success" }';
     }
-	
+
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
@@ -230,6 +230,9 @@ installNginx() {
 setNginxPermissionsAndConfig() {
     local start_time=$(date +%s)
     log "Setting NGINX permissions..." "setNginxPermissions"
+
+    # Create matomo directory
+    sudo mkdir -p /var/www/matomo >>"$LOG_FILE" 2>&1 || logErrorExit "Failed to create Matomo directory."
 
     # Set ownership and permissions for NGINX directories
     sudo chown -R www-data:www-data /var/lib/nginx >>"$LOG_FILE" 2>&1 || logErrorExit "Failed to set ownership for NGINX."
