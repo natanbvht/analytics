@@ -1,0 +1,1 @@
+<?php return unserialize('a:2:{s:8:"lifetime";i:1703828224;s:4:"data";s:189:"Retroid Pocket 2(?:Plus|\\+)|(?:PlayStation ?(2|3|4 Pro|4|5|Portable|Vita)|sony_tv;ps5;)|JXD_S601WIFI|Dreamcast|OUYA|Nintendo (([3]?DS[i]?)|Wii[U]?|Switch|GameBoy)|Xbox|Archos.*GAMEPAD([2]?)";}', ['allowed_classes' => false]);

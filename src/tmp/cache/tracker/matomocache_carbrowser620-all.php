@@ -1,0 +1,1 @@
+<?php return unserialize('a:2:{s:8:"lifetime";i:1703828224;s:4:"data";s:108:"sp9853i_1h10_vmm|Mac Audio Spro|(?:Tesla/(?:(?:develop|feature|terminal-das-fsd-eap)-)?[0-9.]+|QtCarBrowser)";}', ['allowed_classes' => false]);
